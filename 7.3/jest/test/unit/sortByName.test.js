@@ -14,4 +14,16 @@ describe("Books names test suit", () => {
       "Гарри Поттер",
     ]);
   });
+  it("Ignore case when sorting", () => {
+    expect(
+      sorting.sortByName([
+        "Властелин Колец",
+        "ВЛАСТЕЛИН КОЛЕЦ"
+      ])
+    )
+    .toEqual([
+      "Властелин Колец",
+      "ВЛАСТЕЛИН КОЛЕЦ"
+    ])
+  });
 });
