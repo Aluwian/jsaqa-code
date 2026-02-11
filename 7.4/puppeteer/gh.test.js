@@ -43,11 +43,11 @@ describe("Github page tests", () => {
   }, 10000);
 
   test("Subscribe button has correct link", async () => {
-  const btnSelector = ".btn-mktg.mb-4.btn-muted-mktg";
-  await page.waitForSelector(btnSelector, { visible: true });
-  const href = await page.$eval(btnSelector, el => el.href);
-  expect(href).toContain('https://github.com/newsletter');
-}, 10000);
+    const btnSelector = ".btn-mktg.mb-4.btn-muted-mktg";
+    await page.waitForSelector(btnSelector, { visible: true });
+    const href = await page.$eval(btnSelector, el => el.href);
+    expect(href).toContain('https://github.com/newsletter');
+  }, 10000);
 });
 
 describe("Actions page tests", () => {
@@ -68,9 +68,9 @@ describe("Actions page tests", () => {
   }, 10000);
 
   test("The page title contains GitHub Actions", async () => {
-  const title = await page.title();
-  expect(title).toContain("GitHub Actions");
-}, 10000);
+    const title = await page.title();
+    expect(title).toContain("GitHub Actions");
+  }, 10000);
 
   test("The page conteins Get started with actions button", async () => {
     const btnSelector = 'a[href="https://docs.github.com/actions"]';
